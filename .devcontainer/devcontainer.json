@@ -1,17 +1,15 @@
 {
-    "name": "dev project",
+    "name": "Global Dev Environment",
     "image": "ghcr.io/remalloc/dev_base:latest",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
+    "workspaceFolder": "/workspace",
     
     "customizations": {
         "vscode": {
-            "settings": {
-                "terminal.integrated.defaultProfile.linux": "zsh"
-            },
             "extensions": [
                 "ms-python.python",
-                "mhutchie.git-graph"
+                "eamodio.gitlens"
             ]
         }
-    },
-    "remoteUser": "root"
+    }
 }
